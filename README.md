@@ -16,7 +16,7 @@ Project is mainly the integration of Android and Node.js + MongoDB both acting a
 - Get notified about new updates from your friends
 - Block suspicious contacts
 - Maintain privacy
-- Minimal registration - Requires only phone number of user
+- Minimal registration - Requires only the phone number of user
 
 ## Screenshots
 #### Home
