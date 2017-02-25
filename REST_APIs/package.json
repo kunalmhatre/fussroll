@@ -1,0 +1,27 @@
+{
+  "name": "Fussroll",
+  "version": "1.0.0",
+  "description": "Fussroll is an application which lets people share their daily activities with their friends and family.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:kunalrmhatre/fussroll.git"
+  },
+  "keywords": [
+    "fussroll"
+  ],
+  "author": "Kunal R Mhatre",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "fcm-node": "^1.0.16",
+    "moment": "^2.17.1",
+    "mongodb": "^2.2.24",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
+  }
+}

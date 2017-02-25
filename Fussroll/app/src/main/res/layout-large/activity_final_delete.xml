@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/missYou"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/textView11" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@mipmap/emotional"
+        android:id="@+id/imageView3"
+        android:contentDescription="@string/an_emotional_face"
+        android:layout_marginBottom="28dp"
+        android:layout_above="@+id/textView11"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/are_you_really_sure"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:text="@string/yes"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/red"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
+        android:textAllCaps="false"
+        android:id="@+id/button1"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView10"
+        android:layout_toLeftOf="@+id/imageView3"
+        android:layout_toStartOf="@+id/imageView3" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:text="@string/no"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
+        android:textAllCaps="false"
+        android:id="@+id/button"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+
+</RelativeLayout>

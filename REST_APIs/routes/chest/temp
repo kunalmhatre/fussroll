@@ -1,0 +1,129 @@
+//Checking if contact is present in mobile's notifications collection
+//but first checking if mobile has it's object present in notifications collection
+
+var notificationsCollection = db.collection('notifications');
+notificationsCollection.findOne({mobile: mobile}, function(err, item) {
+
+	if(err) {
+		db.close();
+		console.log(err);
+	}
+	else if(item) {
+
+		//Update, but first check if contact exists in the list
+
+		notificationsCollection.findOne({mobile: mobile, squad:{$elemMatch:{$eq: contact}}}, function(err, item) {
+
+			if(err) {
+				db.close();
+				console.log(err);
+			}
+			else if(!item) {
+
+				//Add
+
+				notificationsCollection.update({mobile: mobile},{$push:{squad: contact}}, function(err, result) {
+
+					if(err) {
+						db.close();
+						console.log(err);
+					}
+					else {
+						console.log("Contact added to receive notifications, now reversing the process for contact");
+
+
+
+					}
+
+				});
+
+			}
+			else {
+				console.log("Contact is already present in the list");
+			}
+
+		});
+
+
+	}
+	else {
+
+		//Insert - since this is first time created we do not have to check if contact is present in the list
+
+		notificationsCollection.insert({mobile: mobile, squad:[contact]}, function(err, result) {
+
+			if(err) {
+				db.close();
+				console.log(err);
+			}
+			else {
+				console.log("Contact added to receive notifications");
+			}
+
+		});
+
+	}
+
+});
+
+var notificationsCollection = db.collection('notifications');
+notificationsCollection.findOne({mobile: contact}, function(err, item) {
+
+	if(err) {
+		db.close();
+		console.log(err);
+	}
+	else if(item) {
+
+		//Update, but first check if contact exists in the list
+
+		notificationsCollection.findOne({mobile: contact, squad:{$elemMatch:{$eq: mobile}}}, function(err, item) {
+
+			if(err) {
+				db.close();
+				console.log(err);
+			}
+			else if(!item) {
+
+				//Add
+
+				notificationsCollection.update({mobile: contact},{$push:{squad: mobile}}, function(err, result) {
+
+					if(err) {
+						db.close();
+						console.log(err);
+					}
+					else {
+						console.log("Mobile added to receive notifications, Firebase token exchange is done");
+					}
+
+				});
+
+			}
+			else {
+				console.log("Contact is already present in the list");
+			}
+
+		});
+
+
+	}
+	else {
+
+		//Insert - since this is first time created we do not have to check if contact is present in the list
+
+		notificationsCollection.insert({mobile: contact, squad:[mobile]}, function(err, result) {
+
+			if(err) {
+				db.close();
+				console.log(err);
+			}
+			else {
+				console.log("Mobile added to receive notifications, Firebase token exchange is done");
+			}
+
+		});
+
+	}
+
+});

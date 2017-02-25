@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="@string/verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="30dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="@string/verify"
+            android:textSize="23sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:padding="15dp"
+            android:layout_marginLeft="450dp"
+            android:layout_marginRight="450dp"/>
+
+        <TextView
+            android:text="@string/enterOTP"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:id="@+id/textView2"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="8dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:maxLength="3"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/textView2"
+            android:layout_toLeftOf="@+id/line"
+            android:layout_toStartOf="@+id/line" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:maxLength="3"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/textView2"
+            android:layout_toRightOf="@+id/line"
+            android:layout_toEndOf="@+id/line" />
+
+        <TextView
+            android:text="@string/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/textView3"
+            android:onClick="resendOTP"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/editText1"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignStart="@+id/editText1"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"/>
+
+        <TextView
+            android:text="@string/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/textView4"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2"
+            android:layout_marginRight="22dp"
+            android:layout_marginEnd="22dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,142 @@
+Structure of Logs : 
+
+{
+	"_id" : ObjectId("581c6160da9654184dcd2db6"),
+	"username" : "jerry",
+	"logs" : [
+				{	
+					"date" : "20-11-2016"
+					"time" : "11:34",
+					"category" : "feeling",
+					"fuss" : "good",
+					"meta" : "Feeling"
+				},
+				{	
+					"date" : "20-11-2016"
+					"time" : "23:59",
+					"category" : "activities",
+					"fuss" : "Celebrating Birthday",
+					"meta" : ""
+				},
+				{	
+					"date" : "21-11-2016"
+					"time" : "23:59",
+					"category" : "activities",
+					"fuss" : "Celebrating Birthday",
+					"meta" : ""
+				}
+			]
+}
+
+
+
+db.logs.insert({username:"kunalrmhatre",name:"Kunal R Mhatre", logs:[{date:"19-11-2016",time:"11:40",category:"feeling",log:"good",meta:"Feeling"},{date:"20-11-2016",time:"09:54",category:"feeling",log:"awesome",meta:"Feeling"},
+{date:"20-11-2016",time:"13:20",category:"feeling",log:"good",meta:"Feeling"}]});
+
+db.logs.aggregate([{$match:{username:'jobs'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$eq:['$$logs.date','20-11-2016']}}},_id:0}}]);
+
+db.logs.aggregate([{$match:{mobile:'+919867740461'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$eq:['$$logs.date','24-01-2017']}}},_id:0}}]);
+
+db.logs.aggregate([{$match:{mobile:'+919867740461'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{'$$logs.time':{'$gt': ISODate('17:48:24.485')}}}},_id:0}}]);
+
+db.logs.update({username:"kunalrmhatre"},{$push:{logs:{$each:[{date:"01-11-2016",time:"12:56",category:"Feeling",log:"Felt",meta:"good"}],$sort:{date:-1,time:-1}}}});
+
+2017-01-25T14:20:03.258+00:00
+
+db.logs.aggregate([{$match:{mobile:'+919867740461'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$and:[{$gt:['$$logs.time', '14:41:44.126']}, {$eq:['$$logs.date', '25-01-2017']}]}}},_id:0}}]).pretty();
+
+
+
+
+
+
+
+
+//Timestamp
+db.logs.aggregate([{$match:{mobile:'+919867740461'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$gt:['$$logs.utcTimeStamp', '2017-01-25T14:20:03.258+00:00']}}},_id:0}}]).pretty()
+14:20:07.278
+
+db.logs.aggregate([{$match:{mobile:'+919867740461'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$gt:['$$logs.utcTimeStamp', ISODate('2017-01-25T14:20:03.258+00:00')]}}},_id:0}}]);
+
+
+db.logs.aggregate([{$match:{username:'jobs'}},{$project:{logs:{$filter:{input:'$logs',as:'logs',cond:{$gt:['$$logs.utcTimeStamp','2017-01-25T14:20:03.258+00:00']}}},_id:0}}]);
+
+//OTP
+
+Math.floor(Math.random()*(999-100+1)+100)+"-"+Math.floor(Math.random()*(999-100+1)+100)
+
+
+$gt:['$$logs.time', '14:41:44.126']
+$eq:['$$logs.date', '24-01-2017']
+
+$and:[{$gt:['$$logs.time', '14:41:44.126']}, {$eq:['$$logs.date', '24-01-2017']}]
+
+
+//UID
+
+Math.floor(Math.random()*(999999-100000+1)+100000)
+
+//updateLog Query
+
+curl --data-urlencode "mobile=+919867740461" --data-urlencode "uid=725612" --data-urlencode "category=feeling" --data-urlencode "log=good" --data-urlencode "meta=Feeling" localhost:1337/api/updateLog
+
+725612
+
+879759
+
+db.contacts.find({mobile:"+919867740461", contacts:{$elemMatch:{$eq:"+919867740461"}}}).pretty()
+
+db.contacts.update({mobile: "+919867740461"},{$push:{contacts:"+19867740461"}});
+
+959039
+
+db.users.update({mobile: "+919619423080"},{$push:{block:"+919867740461"}});
+
+
+db.users.find({mobile: "+919619423080", block:{$elemMatch:{$eq:"+919867740461",$eq:"9867740461"}}}).pretty()
+
+{$or:[{block:{$elemMatch:{$eq: "9619423080"}}},{block:{$elemMatch:{$eq:"+919867740461"}}}]})
+
+db.users.find({mobile: "+919619423080", block:{$elemMatch:{$eq:"+919867740461",$eq:"9867740461",$eq:"919867740461",$eq:"09867740461"}}}).pretty()
+
+--> db.contacts.find({mobile: "+919619423080", contacts:{$elemMatch:{$in:["+919867740461","919867740461","09867740461","9867740461"]}}}).pretty()
+
+db.users.find({mobile: "+919619423080", contacts:{$elemMatch:{$eq:"+919867740461",$eq:"9867740461",$eq:"919867740461",$eq:"09867740461"}}}).pretty()
+
+db.users.update({mobile: "+919619423080"},{$push:{block:{$each:["+919867740461","919867740461","09867740461","9867740461"]}}});
+
+db.users.update({mobile: "+919619423080"},{$pull:{block:{$in:["+919867740461","919867740461","09867740461","9867740461"]}}});
+
+/*//Country Specific --- ######### (India, US, UK, Canada)
+if(contact.length == 10) {
+	//Only mobile number provided, seems that contact is from same country
+	contact_1 = mobile.slice(0, -10)+contact; //+919867740461
+	contact_2 = contact_1.slice(1,str.length); //919867740461
+	contact_3 = '0'+contact; //09867740461
+}
+else if(contact.length > 10 && contact.length <= 13 && contact.indexOf('+') == -1) {
+	//Mobile number with country code
+	contact_1 = '+'+contact; //+919867740461
+	contact_2 = contact.slice(-10); //9867740461
+	contact_3 = '0'+contact_2; //09867740461
+}
+else if(contact.length == 11 && contact.slice(0, -10) === '0') {
+	//As 0 is used in front of the mobile number the mobile number is from the same country
+	contact_1 = contact.slice(-10); //9867740461
+	contact_2 = mobile.slice(0, -10)+contact_1; //+919867740461
+	contact_3 = contact_2.slice(1,str.length); //919867740461
+}*/
+
+
++919619423080 >> 783559
++919867740461 >> 920861
++19867740461 >> 296094
++22986774046 >> 637083
+
+48 × 48 (mdpi)
+72 × 72 (hdpi)
+96 × 96 (xhdpi)
+144 × 144 (xxhdpi)
+192 × 192 (xxxhdpi)
+512 × 512 (Google Play store)
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/muteUnmute"
+        android:title="@string/mute"
+        android:icon="@mipmap/ic_notifications_active_white_24dp"
+        app:showAsAction="ifRoom"/>
+
+</menu>

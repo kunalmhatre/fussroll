@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/fussrollName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="55sp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="100dp"/>
+        
+        <TextView
+            android:textSize="15sp"
+            android:layout_below="@id/fussrollName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tagLine"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:textSize="13sp"
+            android:text="@string/privacyPolicyMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/privacyPolicyMessage"
+            android:layout_alignParentBottom="true"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="@string/register"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:elevation="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/privacyPolicyMessage"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
