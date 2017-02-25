@@ -36,6 +36,6 @@ Project is mainly the integration of Android and Node.js + MongoDB both acting a
 ## Current Development
 This project is no longer maintained.
 
-## Bugs to patch
+## Bugs
 - Lags too much while swiping ViewPager, which is present in HomeActivity, mostly due to the processing done by each Fragment associated with the ViewPager.
 - Samsung S5 incompatibility - ANR after verification step.
