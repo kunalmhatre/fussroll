@@ -6,8 +6,8 @@ Project is mainly the integration of Android and Node.js + MongoDB both acting a
 
 ## Features
 - 6 categories of activities to select from
-    - Feelings
-    - Activities
+    - Feeling
+    - Activity
     - Place
     - Food
     - Drink
