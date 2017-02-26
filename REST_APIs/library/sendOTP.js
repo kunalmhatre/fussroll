@@ -1,5 +1,5 @@
 var request = require('request');
-var authKey = "131343A7CR7t6uD0N0582d9687";
+var authKey = "[YOUR_AUTHKEY]";
 var senderID = "FSROLL";
 
 exports.otpToNumber = function(otp, mobile) {

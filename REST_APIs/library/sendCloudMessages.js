@@ -1,5 +1,5 @@
 var FCM = require('fcm-node');
-var serverKey = 'AAAA_pSczh8:APA91bEbalTNhyc2nEPi25O7q8zr2NrkuyrCVoPfkG-UQqQt53bSUa2FYz5ysvOZgmS9bn1M0UJRK3rhHrzLsQcY8YPs0-Af4t9ds62szZl0ovTtfgKkz23uD-_Zk79WBNiXMoOhmnaOWU7PGS8Cq_MKTfnahPJP9Q';
+var serverKey = '[YOUR_SERVERKEY]';
 var fcm = new FCM(serverKey);
 
 exports.sendCloudMessages = function(fbtokens, mobile, category, meta, log, date, time) {
