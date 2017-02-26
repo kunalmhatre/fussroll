@@ -17,7 +17,7 @@ Project is mainly the integration of Android and Node.js + MongoDB both acting a
 - Block suspicious contacts
 - Maintain privacy
 - Minimal registration - Requires only the phone number of user
-- Supports 4 countries in terms of verification and handling of phone numbers : India, United States, United Kingdom, Canada
+- Supports 4 countries in terms of verification and handling of phone numbers : India, United States, United Kingdom and Canada
 
 ## Screenshots
 #### Home
