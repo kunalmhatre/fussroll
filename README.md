@@ -27,8 +27,9 @@ Project is mainly the integration of Android and Node.js + MongoDB both acting a
 ![Timeline in Fussroll](https://res.cloudinary.com/dmvkaukjs/image/upload/v1488012079/3_he5ase.png)
 
 ## Setup
-- Get yourself registered with [Firebase](https://firebase.google.com/) and [MSG91](https://msg91.com/) and get the ServerKey from Firebase and AuthKey from MSG91
-- Add your ServerKey in **serverKey** variable present in REST_APIs/library/sendCloudMessages.js and AuthKey in **authKey** variable present in REST_APIs/library/sendOTP.js
+- Connect the Android application with Firebase from Android Studio using Firebase Assistant or manually
+- Get yourself registered with [MSG91](https://msg91.com/) and get your Auth key. Also, get your Server key from Firebase console present under Cloud Messaging tab
+- Add your Server key in **serverKey** variable present in REST_APIs/library/sendCloudMessages.js and Auth key in **authKey** variable present in REST_APIs/library/sendOTP.js
 - Create database named **fussroll** using MongoDB and create following blank collections: **users**, **contacts**, **logs**, **cloudMessages**, **blockedBy**
 - Host the back-end on VPS or any managed hosting and finalize your end-point (for e.g, api.example.com)
 - Edit the API end-points section present in strings.xml file of Android application and change it to yours
