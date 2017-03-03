@@ -41,3 +41,7 @@ This project is no longer maintained.
 ## Bugs
 - Lags too much while swiping ViewPager, which is present in HomeActivity, mostly due to the processing done by each Fragment associated with the ViewPager.
 - Samsung S5 incompatibility - ANR after verification step.
+
+## Possible solution to resolve lag bug
+- In Yours and People Fragments, get only the cursor from DatabaseHandler (instead of all rows in List\<Logs> object) and send it to respective Adapters or try to implement a SimpleCursorAdapter mechanism for RecyclerView.
+- Also, implement Loader to get all contacts from the device in Contacts Fragment. 
