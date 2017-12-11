@@ -2,7 +2,7 @@
 Fussroll lets you quickly share your daily activities with your friends and family.
 
 ## Introduction
-Project is mainly the integration of Android and Node.js + MongoDB both acting as front-end and back-end respectively. Fussroll contains list of activities, feelings and many more, from which user has to select anyone which is relevant to the context, for e.g, let's say user is feeling angry now, then he or she scrolls the list of feelings (or search) and tap on the list item which says "angry" with a cool emoji icon associated with it and then a pop-up shows the meta information to it that is, Feeling and Felt, since user is feeling angry right now, he or she will choose Feeling and will update the status. Which then will be shared with his or her friends. 
+Project is mainly an integration of Android and Node.js (with MongoDB) both acting as front-end and back-end respectively. Fussroll contains list of activities, feelings and many more, all associated with cool emojis, from which user selects one according to the situation or context and shares the selected "status snippet" with his (or her) friends.
 
 ## Features
 - 6 categories of activities to select from
